@@ -50,8 +50,13 @@ class Field {
     field[hatY][hatX] = hat
 
     // Random hole %
+    // const totalTiles = height * width
+    // const totalHoles = Math.floor(totalTiles * (percentage / 100))
+
     const totalTiles = height * width
-    const totalHoles = Math.floor(totalTiles * (percentage / 100))
+    const totalHoles = Math.round(
+      Math.random(totalTiles * (percentage / 100)) * 10
+    )
 
     // Random hole placement
     let holesPlaced = 0
